@@ -1,0 +1,23 @@
+﻿<Window x:Class="Wpf_Telegram_bot_22.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Telegram_bot_22"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="458" Width="588">
+    <Grid Margin="44,26,10,24">
+        <Button HorizontalAlignment="Left" Margin="35,152,0,0" VerticalAlignment="Top" Width="110" Name="butt" Click="Button_Click">
+            <TextBlock TextWrapping="Wrap" Text="Run bot"/>
+        </Button>
+        <TextBox HorizontalAlignment="Left" Margin="35,78,0,0" TextWrapping="Wrap" Text="50045690" VerticalAlignment="Top" Width="423" Name="txtKey"/>
+        <TextBlock HorizontalAlignment="Left" Margin="35,24,0,0" TextWrapping="Wrap" Text="Insert bot token" VerticalAlignment="Top" Width="402"/>
+
+        <TextBlock    Name="TextRune" HorizontalAlignment="Left" Margin="168,155,0,0" TextWrapping="Wrap" Text="Waiting..." VerticalAlignment="Top" Width="356" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="35,230,0,0" TextWrapping="Wrap" Name="Question1" VerticalAlignment="Top" Width="201"/>
+        <TextBox HorizontalAlignment="Left" Margin="286,230,0,0" TextWrapping="Wrap" Name="Answer1" VerticalAlignment="Top" Width="221"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,212,0,0" TextWrapping="Wrap" Text="Type Question" VerticalAlignment="Top" Width="178"/>
+        <TextBlock HorizontalAlignment="Left" Margin="291,212,0,0" TextWrapping="Wrap" Text="Type Answer" VerticalAlignment="Top" Width="178"/>
+
+    </Grid>
+</Window>
