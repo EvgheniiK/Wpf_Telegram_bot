@@ -18,6 +18,8 @@
         <TextBox HorizontalAlignment="Left" Margin="286,230,0,0" TextWrapping="Wrap" Name="Answer1" VerticalAlignment="Top" Width="221"/>
         <TextBlock HorizontalAlignment="Left" Margin="43,212,0,0" TextWrapping="Wrap" Text="Type Question" VerticalAlignment="Top" Width="178"/>
         <TextBlock HorizontalAlignment="Left" Margin="291,212,0,0" TextWrapping="Wrap" Text="Type Answer" VerticalAlignment="Top" Width="178"/>
+        <TextBox HorizontalAlignment="Left" Margin="35,269,0,0" TextWrapping="Wrap" x:Name="Question2" VerticalAlignment="Top" Width="201"/>
+        <TextBox HorizontalAlignment="Left" Margin="286,269,0,0" TextWrapping="Wrap" x:Name="Answer2" VerticalAlignment="Top" Width="221"/>
 
     </Grid>
 </Window>

@@ -26,7 +26,7 @@ namespace Wpf_Telegram_bot_22
 
         }
         BackgroundWorker bw;
-       
+
 
 
 
@@ -42,7 +42,7 @@ namespace Wpf_Telegram_bot_22
             try
             {
                 var botClient = new TelegramBotClient(key); // инициализируем API
-                //await botClient.SetWebhookAsync(""); // Обязательно! убираем старую привязку к вебхуку для бота
+                //await botClient.SetWebhookAsync(""); //  убираем старую привязку к вебхуку для бота
                 var receiverOptions = new ReceiverOptions
                 {
                     AllowedUpdates = { } // receive all update types
@@ -113,7 +113,11 @@ namespace Wpf_Telegram_bot_22
                     await botClient.SendTextMessageAsync(message.Chat.Id, keyFromTextBox[2]);
 
                 }
+                if (message.Text == keyFromTextBox[3])
+                {
+                    await botClient.SendTextMessageAsync(message.Chat.Id, keyFromTextBox[4]);
 
+                }
 
                 #region эхо ответ
                 // Echo received message text
@@ -165,23 +169,26 @@ namespace Wpf_Telegram_bot_22
             Dispatcher.Invoke(() => TextRune.Text = text);
         }
 
-
+        bool buttonControl = false;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
             var botToken = @txtKey.Text;
             var question1 = Question1.Text;
             var answer1 = Answer1.Text;
-
-            List<string> listOfTextBlocks = new List<string>() { botToken, question1, answer1 };
+            var question2 = Question2.Text;
+            var answer2 = Answer2.Text;
+            List<string> listOfTextBlocks = new List<string>() { botToken, question1, answer1, question2, answer2 };
 
             // получаем содержимое текстового поля txtKey в переменную botToken
-            if (botToken != "" && this.bw.IsBusy != true)
+            if (botToken != "" && this.bw.IsBusy != true && buttonControl == false)
             {
                 this.bw.RunWorkerAsync(listOfTextBlocks); // передаем эту переменную в виде аргумента методу bw_DoWork
 
                 TextRune.Text = "Бот запущен...";
             }
+            buttonControl = true;
         }
 
 
